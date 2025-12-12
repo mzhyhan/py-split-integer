@@ -2,11 +2,7 @@ from app.split_integer import split_integer
 
 
 def test_sum_of_the_parts_should_be_equal_to_value() -> None:
-    value = 9
-    parts = 3
-    assert sum(split_integer(value, parts)) == value
-
-
+    assert sum(split_integer(9, 3)) == 9
 def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
     assert split_integer(12, 3) == [4, 4, 4]
 
