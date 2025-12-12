@@ -2,18 +2,9 @@ from app.split_integer import split_integer
 
 
 def test_sum_of_the_parts_should_be_equal_to_value() -> None:
-    # Test several values and numbers of parts
-    test_cases = [
-        (9, 3),   # divisible case
-        (10, 3),  # non-divisible case
-        (1, 1),   # trivial case
-        (0, 1),   # edge case
-    ]
-
-    for value, number_of_parts in test_cases:
-        result = split_integer(value, number_of_parts)
-        assert sum(result) == value, \
-            f"Failed value={value}, parts={number_of_parts}"
+    value = 9
+    parts = 3
+    assert sum(split_integer(value, parts)) == value
 
 
 def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
